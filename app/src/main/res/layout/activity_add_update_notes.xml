@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray"
+    tools:context=".Activities.AddUpdateNotes">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/main_app_bar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/edit_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="189dp"></androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:clipToPadding="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+        <LinearLayout
+            android:layout_margin="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+        <EditText
+            android:id="@+id/add_title_eD"
+            android:maxLines="1"
+            android:maxLength="10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Title..."
+            android:textColorHint="@color/black"
+            android:padding="15dp"
+            android:background="@drawable/rec_01"
+            android:fontFamily="@font/product_sans_regular"
+            android:layout_marginBottom="1dp"
+           />
+        <EditText
+            android:id="@+id/add_sub_title_eD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:maxLines="1"
+
+            android:maxLength="30"
+            android:layout_marginEnd="16dp"
+            android:hint="Subtitle..."
+            android:padding="15dp"
+            android:background="@drawable/rec_01"
+            android:fontFamily="@font/product_sans_regular" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/black"
+                android:layout_marginStart="16dp"
+                android:layout_gravity="center_vertical"/>
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/priority_green"
+                android:gravity="center"
+
+                android:background="@drawable/circl_green"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"/>
+            <TextView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:id="@+id/priority_yellow"
+                android:gravity="center"
+                android:background="@drawable/circl_yellow"
+                android:fontFamily="@font/product_sans_regular"
+                android:textColor="@color/black"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="16dp"/>
+
+            <TextView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:id="@+id/priority_red"
+            android:gravity="center"
+            android:background="@drawable/circl_red"
+            android:fontFamily="@font/product_sans_regular"
+            android:textColor="@color/black"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp"/>
+
+        </LinearLayout>
+        <EditText
+            android:id="@+id/add_note_eD"
+            android:layout_width="match_parent"
+            android:layout_height="371dp"
+            android:gravity="top"
+            android:padding="15dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Note..."
+            android:textColorHint="@color/black"
+            android:background="@drawable/rec_01"
+            android:fontFamily="@font/product_sans_regular" />
+
+        </LinearLayout>
+    </ScrollView>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_check"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="20dp"
+        app:backgroundTint="@color/red"
+        android:layout_marginEnd="20dp"
+
+        android:id="@+id/main_float_button"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

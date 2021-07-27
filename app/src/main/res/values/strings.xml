@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Keep</string>
+    <string name="done_mark">\u2713</string>
+</resources>
